@@ -5,7 +5,6 @@ const margeTwoArray = (array1, array2, target) => {
   const margedArray = [...array1, ...array2];
   let left = 0;
   let right = margedArray.length - 1;
-  console.log(margedArray);
 
   while (left <= right) {
     let mid = Math.floor((left + right) / 2);
