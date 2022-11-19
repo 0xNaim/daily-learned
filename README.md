@@ -1,1 +1,1 @@
-# daily learned
+# daily learning trash

@@ -1,4 +1,4 @@
-// doubly linked list
+// doubly linked list node class
 class Node {
   constructor(value, next = null, prev = null) {
     this.value = value;
@@ -7,6 +7,7 @@ class Node {
   }
 }
 
+// Double linked list
 class DoubleLinkedList {
   length = 0;
   constructor(value) {

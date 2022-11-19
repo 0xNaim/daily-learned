@@ -1,3 +1,4 @@
+// Hash table class
 class HashTable {
   constructor() {
     this.table = new Array(100);
@@ -11,13 +12,6 @@ class HashTable {
     }
     return hash % this.table.length;
   }
-
-  // Old code
-  // set(key, value) {
-  //   const index = this._hash(key);
-  //   this.table[index] = [key, value];
-  //   this.size++;
-  // }
 
   set(key, value) {
     const index = this._hash(key);

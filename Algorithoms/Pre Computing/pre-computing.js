@@ -1,5 +1,4 @@
-// Pre-computing;
-
+// Pre computing
 const preComputing = (n) => {
   let result = [];
   result[0] = 0;

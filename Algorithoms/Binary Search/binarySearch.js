@@ -4,11 +4,12 @@ const array = [
   42, 43, 44, 45, 46, 47, 48, 49, 50,
 ];
 
+// Binary search
 const binarySearch = (sortedArr, targetValue) => {
   let left = 0;
   let right = sortedArr.length - 1;
 
-  while (left <= right) {    
+  while (left <= right) {
     let mid = Math.floor((left + right) / 2);
     if (sortedArr[mid] === targetValue) {
       return mid;

@@ -1,3 +1,4 @@
+// Node class
 class Node {
   constructor(data, next = null) {
     this.data = data;
@@ -5,6 +6,7 @@ class Node {
   }
 }
 
+// LinkedList class
 class LinkedList {
   constructor() {
     this.head = null;
@@ -20,16 +22,20 @@ class LinkedList {
   // Insert last node
   insertLast(data) {
     const node = new Node(data);
-    let current;
 
-    // If empty, make node
+    // To store current node
+    let current;
     if (!this.head) {
       this.head = node;
     } else {
       current = this.head;
+
+      // Iterate to the end of the list
       while (current.next) {
         current = current.next;
       }
+
+      // Add node
       current.next = node;
     }
     this.size++;
