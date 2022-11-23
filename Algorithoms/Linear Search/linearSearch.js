@@ -8,5 +8,5 @@ const linearSearch = (array, targetValue) => {
     return -1;
 };
 
-const result = linearSearch([1, 5, 6, 2, 3, 8, 9, 7, 4], 4);
-console.log(result);
+const result = linearSearch([1, 5, 6, 2, 3, 8, 9, 7, 4], 3);
+console.log(result); // 4
