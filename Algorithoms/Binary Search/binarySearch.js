@@ -25,4 +25,4 @@ const binarySearch = (sortedArr, targetValue) => {
 };
 
 const result = binarySearch(array, 49);
-console.log(result);
+console.log(result); // 48

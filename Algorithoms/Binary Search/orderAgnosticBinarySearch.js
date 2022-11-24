@@ -6,26 +6,26 @@ const array2 = [
 ];
 
 // Order agnostic binary search
-const orderAgnosticBinarySearch = (sortedArr, targetValue) => {
+const orderAgnosticBinarySearch = (array, targetValue) => {
   let low = 0;
-  let high = sortedArr.length - 1;
-  let isAsc = sortedArr[low] < sortedArr[high];
+  let high = array.length - 1;
+  let isAsc = array[low] < array[high];
 
   while (low <= high) {
     let middle = Math.floor((low + high) / 2);
 
-    if (sortedArr[middle] === targetValue) {
+    if (array[middle] === targetValue) {
       return middle;
     }
 
     if (isAsc) {
-      if (sortedArr[middle] < targetValue) {
+      if (array[middle] < targetValue) {
         low = middle + 1;
       } else {
         high = middle - 1;
       }
     } else {
-      if (sortedArr[middle] > targetValue) {
+      if (array[middle] > targetValue) {
         low = middle + 1;
       } else {
         high = middle - 1;
@@ -36,23 +36,23 @@ const orderAgnosticBinarySearch = (sortedArr, targetValue) => {
 };
 
 const result = orderAgnosticBinarySearch(array2, 13);
-console.log(result);
+console.log(result); // 7
 
 // Order agnostic binary search another method
-const orderAgnosticBinarySearch2 = (sortedArr, targetValue) => {
+const orderAgnosticBinarySearch2 = (array, targetValue) => {
   let low = 0;
-  let high = sortedArr.length - 1;
+  let high = array.length - 1;
 
   while (low <= high) {
     let middle = Math.floor((low + high) / 2);
 
-    if (sortedArr[middle] === targetValue) {
+    if (array[middle] === targetValue) {
       return middle;
     }
 
     if (
-      (sortedArr[low] < sortedArr[high] && targetValue < sortedArr[middle]) ||
-      (sortedArr[low] > sortedArr[high] && targetValue > sortedArr[middle])
+      (array[low] < array[high] && targetValue < array[middle]) ||
+      (array[low] > array[high] && targetValue > array[middle])
     ) {
       high = middle - 1;
     } else {
@@ -63,5 +63,4 @@ const orderAgnosticBinarySearch2 = (sortedArr, targetValue) => {
 };
 
 const result2 = orderAgnosticBinarySearch2(array2, 13);
-console.log(result2);
-
+console.log(result2); // 7
